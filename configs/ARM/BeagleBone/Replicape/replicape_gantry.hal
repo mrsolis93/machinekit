@@ -104,15 +104,6 @@ setp hpg.stepgen.00.dirpin         826
 
 
 
-#loadrt gantry count=1 personality=2
-newinst gantry gantry.0 pincount=2
-
-
-addf gantry.0.read                        servo-thread
-addf gantry.0.write                       servo-thread
-
-
-
 
 
 # ################
@@ -124,6 +115,12 @@ sets emcmot.01.enable FALSE
 
 net emcmot.01.enable <= axis.1.amp-enable-out
 net emcmot.01.enable => hpg.stepgen.01.enable
+
+newsig emcmot.04.enable bit
+sets emcmot.04.enable FALSE
+
+net emcmot.04.enable <= axis.4.amp-enable-out
+net emcmot.04.enable => hpg.stepgen.04.enable
 
 # position command and feedback
 net emcmot.01.pos-cmd <= axis.1.motor-pos-cmd
