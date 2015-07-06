@@ -111,13 +111,7 @@ setp hpg.stepgen.00.dirpin         826
 # ################
 
 
-
 # position command and feedback
-net emcmot.01.pos-cmd <= axis.1.motor-pos-cmd
-net emcmot.01.pos-cmd => hpg.stepgen.01.position-cmd
-
-net motor.01.pos-fb <= hpg.stepgen.01.position-fb
-net motor.01.pos-fb => axis.1.motor-pos-fb
 
 net y1pos-cmd gantry.0.joint.00.pos-cmd => hpg.stepgen.01.position-cmd
 net y1pos-fb  gantry.0.joint.00.pos-fb  <= hpg.stepgen.01.position-fb
@@ -383,10 +377,4 @@ setp pid.1.Igain  0.001875
 setp pid.1.Dgain  0.3879
 setp pid.1.maxoutput 1.0
 
-
-loadusr -W hal_manualtoolchange
-net tool-change iocontrol.0.tool-change => hal_manualtoolchange.change
-net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
-net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
-net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
 
