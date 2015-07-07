@@ -153,8 +153,8 @@ setp hpg.stepgen.04.position-scale  [AXIS_4]SCALE
 setp hpg.stepgen.04.maxvel          [AXIS_4]STEPGEN_MAX_VEL
 setp hpg.stepgen.04.maxaccel        [AXIS_4]STEPGEN_MAX_ACC
 
-setp hpg.stepgen.04.steppin        811
-setp hpg.stepgen.04.dirpin         816
+setp hpg.stepgen.04.steppin        912
+setp hpg.stepgen.04.dirpin         815
 
 
 
@@ -226,8 +226,8 @@ setp hpg.stepgen.03.position-scale  [AXIS_3]SCALE
 setp hpg.stepgen.03.maxvel          [AXIS_3]STEPGEN_MAX_VEL
 setp hpg.stepgen.03.maxaccel        [AXIS_3]STEPGEN_MAX_ACC
 
-setp hpg.stepgen.03.steppin        912
-setp hpg.stepgen.03.dirpin         815
+setp hpg.stepgen.03.steppin        811
+setp hpg.stepgen.03.dirpin         816
 
 
 # ##################################################
